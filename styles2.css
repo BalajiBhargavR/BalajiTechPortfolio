@@ -1,0 +1,232 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #ffffff; /* White background */
+    color: #004d40; /* Dark teal text */
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Navigation styling */
+nav {
+    background: #A9A9A9; /* Light grey */
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #e91e63; /* Pink on hover */
+    background-color: #80deea; /* Light blue on hover */
+}
+
+/* Header section */
+header {
+    background: linear-gradient(135deg, #A9A9A9, #B0B0B0); /* Light grey gradient */
+    color: #fff;
+    text-align: center;
+    padding: 3rem 0;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+    animation: slideUp 1s ease-out;
+}
+
+header .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+header p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* Profile picture styling */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 6px solid #000; /* Black border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+/* Section styling */
+.section {
+    padding: 3rem 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 32px;
+    color: #004d40; /* Dark teal headings */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+    animation: fadeIn 1s ease-out;
+}
+
+.section h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 60px;
+    height: 4px;
+    background-color: #B0B0B0; /* Light grey accent */
+    transform: translateX(-50%);
+}
+
+/* Skills section */
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+#skills ul li {
+    background: #B0B0B0; /* Light grey for skill tags */
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#skills ul li:hover {
+    transform: translateY(-5px);
+    background-color: #000; /* Black on hover */
+}
+
+/* Projects styling */
+.project-item {
+    background: #ffffff; /* Light teal background */
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid #B0B0B0; /* Light grey border */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact section */
+.contact-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 30px; /* Add space between icons */
+    margin-top: 20px; /* Add some top margin */
+}
+
+.contact-icons .icon {
+    width: 60px; /* Increase icon size */
+    height: 60px; /* Increase icon size */
+}
+
+.contact-icons .icon i {
+    font-size: 50px; /* Increase icon font size */
+    color: inherit; /* Keep original color */
+    transition: transform 0.3s ease; /* Animation effect */
+}
+
+.contact-icons .icon:hover i {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.contact-icons .icon i.fa-envelope { color: #D44638; }   /* Gmail red */
+.contact-icons .icon i.fa-instagram { color: #C13584; }  /* Instagram pink */
+.contact-icons .icon i.fa-linkedin { color: #0077B5; }   /* LinkedIn blue */
+.contact-icons .icon i.fa-whatsapp { color: #25D366; }   /* WhatsApp green */
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #A9A9A9; /* Light grey */
+    color: #fff;
+    position: relative;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
